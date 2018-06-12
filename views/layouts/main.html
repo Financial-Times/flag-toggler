@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" class="o-hoverable-on o-techdocs core">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>FT Flag Toggler</title>
+	<meta name="viewport" content="initial-scale=1.0, width=device-width">
+	<script src="//cdn.polyfill.io/v2/polyfill.min.js?features=document.querySelector,Element.prototype.classList,Array.prototype.forEach,default"></script>
+	<script>
+			var script = document.createElement('script');
+			var supportsDeferredScripts = 'defer' in script && 'async' in script;
+			var classes = document.documentElement.className;
+
+			window.cutsTheMustard = (
+				typeof document.documentElement.dataset === 'object'
+				&& ('visibilityState' in document)
+				&& supportsDeferredScripts
+			);
+
+			if (window.cutsTheMustard) {
+				classes = classes.replace(/\bcore\b/, 'enhanced');
+			}
+	</script>
+	<style>
+		body {
+			margin: 0;
+		}
+
+		.core .o--if-js,
+		.enhanced .o--if-no-js {
+			display: none !important;
+		}
+	</style>
+	<link rel="stylesheet" href="//www.ft.com/__origami/service/build/v2/bundles/css?modules=o-techdocs%407%2Co-forms%405%2Co-fonts%40%5E3%2Co-buttons%40%5E5%2Co-normalise%401">
+	<link rel="stylesheet" href="/{{__name}}/main.css">
+</head>
+<body>
+	<header class="o-header-services" data-o-component="o-header">
+		<div class="o-header-services__top o-header-services__container">
+			<div class="o-header-services__ftlogo"></div>
+			<div class="o-header-services__title">
+				<h1 class="o-header-services__product-name"><a href="/">FT Flag Toggler</a></h1>
+			</div>
+		</div>
+	</header>
+
+	<div class="o-techdocs-hero">
+		<p class="o-techdocs-hero__title">
+			Toggle features across FT’s suite of internal products.
+		</p>
+	</div>
+
+	<div class="o-techdocs-container">
+		<div class="o-techdocs-layout">
+
+			<div class="o-techdocs-main">
+				<div class="o-techdocs-content">
+					{{{body}}}
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<script src="//www.ft.com/__origami/service/build/v2/bundles/js?modules=o-fonts%40%5E3"></script>
+	<script src="/{{__name}}/main.js"></script>
+</body>
+</html>

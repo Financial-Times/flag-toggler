@@ -34,9 +34,7 @@ const config = {
 		'wrap-iife': 2
 	},
 	'globals': {},
-	'plugins': [
-		'no-only-tests'
-	],
+	'plugins': [],
 	'extends': [],
 	'overrides': [
 		{

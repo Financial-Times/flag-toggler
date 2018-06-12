@@ -1,0 +1,31 @@
+.o-techdocs-layout {
+	justify-content: center;
+}
+
+.o-forms__group--inline-together {
+	grid-auto-columns: auto;
+}
+
+.flags {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	margin: 40px 0;
+}
+
+.flag {
+	border: 4px solid #f5f5f5;
+	margin: 0;
+}
+
+.flag--on {
+	border: 4px solid #00994d; /* o-colors jade */
+}
+
+.flag--off {
+	border: 4px solid #c00; /* o-colors crimson */
+}
+
+.flag-button {
+	margin: 0 10px 10px;
+}

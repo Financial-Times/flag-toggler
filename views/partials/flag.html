@@ -1,0 +1,27 @@
+<form method="POST" action="/api/{{name}}" class="o-techdocs-card flag{{#if userState}} flag--{{userState.state}}{{/if}}" data-flag>
+	<div class="o-techdocs-card__context">
+
+		<div class="o-techdocs-card__heading">
+			<div class="o-techdocs-card__title">{{name}}</div>
+			<div class="o-techdocs-card__subtitle">Flag is {{state}} for everyone.</div>
+		</div>
+
+	</div>
+	<div class="o-techdocs-card__content">
+		<p>{{description}}</p>
+	</div>
+	<div class="o-techdocs-card__subtitle">
+		<fieldset class="o-forms">
+			<!-- <legend class="o-forms__label">Checkbox Toggle</legend> -->
+			<div class="o-forms__group o-forms__group--inline-together">
+				<input type="radio" name="state" value="" class="o-forms__radio-button" id="state-{{name}}-null" aria-label="Use production status of {{name}} ({{state}})" {{#unless userState.state}}checked{{/unless}}>
+				<label for="state-{{name}}-null" class="o-forms__label">As live ({{state}})</label>
+				<input type="radio" name="state" value="off" class="o-forms__radio-button" id="state-{{name}}-off" aria-label="Turn off {{name}} for this browser" {{#ifEquals userState.state "off"}}checked{{/ifEquals}}>
+				<label for="state-{{name}}-off" class="o-forms__label">Off</label>
+				<input type="radio" name="state" value="on" class="o-forms__radio-button" id="state-{{name}}-on" aria-label="Turn on {{name}} for this browser" {{#ifEquals userState.state "on"}}checked{{/ifEquals}}>
+				<label for="state-{{name}}-on" class="o-forms__label">On</label>
+			</div>
+		</fieldset>
+		<button type="submit" class="o-buttons o-buttons--primary flag-button o--if-no-js">Submit change</button>
+	</div>
+</form>
