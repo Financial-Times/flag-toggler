@@ -1,0 +1,20 @@
+{
+  "name": "flag-toggler",
+  "version": "0.0.0",
+  "description": "Enables staff to toggle feature flags (and other kinds of flags) for their device only.",
+  "main": "server/app.js",
+  "scripts": {
+    "commitmsg": "secret-squirrel-commitmsg",
+    "precommit": "secret-squirrel",
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Financial-Times/flag-toggler.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@financial-times/secret-squirrel": "^2.9.0",
+    "husky": "^0.14.3"
+  }
+}
