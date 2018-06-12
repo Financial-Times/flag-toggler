@@ -5,7 +5,9 @@
   "main": "server/app.js",
   "scripts": {
     "commitmsg": "secret-squirrel-commitmsg",
+    "dev": "VAULT_PATH=secret/teams/internal-products/flag-toggler/development node --require @financial-times/vaultenv server/app.js",
     "precommit": "secret-squirrel",
+    "start": "VAULT_PATH=secret/teams/internal-products/flag-toggler/production node --require @financial-times/vaultenv server/app.js",
     "test": "npm test"
   },
   "repository": {
@@ -13,8 +15,17 @@
     "url": "git+https://github.com/Financial-Times/flag-toggler.git"
   },
   "license": "MIT",
+  "dependencies": {
+    "@financial-times/n-internal-tool": "^2.2.4",
+    "@financial-times/n-logger": "^5.6.4",
+    "@financial-times/vaultenv": "^0.3.2"
+  },
   "devDependencies": {
     "@financial-times/secret-squirrel": "^2.9.0",
+    "eslint": "^4.19.1",
     "husky": "^0.14.3"
+  },
+  "engines": {
+    "node": "^10.4.0"
   }
 }
